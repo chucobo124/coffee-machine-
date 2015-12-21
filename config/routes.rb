@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
-  resource 'setting'
+  resource 'setting' do
+    get "change"
+    post "change_update"
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

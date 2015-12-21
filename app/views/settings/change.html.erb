@@ -1,0 +1,5 @@
+<%=form_tag change_update_setting_path do |setting|%>
+  <label>Port:</label><%= text_field_tag  :port , @settings["port"]%><br/>
+  <label>Baud:</label><%= text_field_tag  :baud , @settings["baud"]%><br/>
+  <%= submit_tag("Update") %>
+<%end%>

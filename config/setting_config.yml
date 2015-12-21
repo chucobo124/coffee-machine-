@@ -1,0 +1,3 @@
+---
+port: dev/hello
+baud: '9600'
