@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
+  get 'home/tmp' ,:defaults => { :format => 'json' }
   resource 'setting' do
     get "change"
     post "change_update"

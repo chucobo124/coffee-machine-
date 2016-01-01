@@ -1,4 +1,5 @@
 require 'yaml'
+require 'connection/arduino'
 class SettingsController < ApplicationController
   before_action :prepare_settings
   def show
@@ -10,7 +11,7 @@ class SettingsController < ApplicationController
     redirect_to change_setting_path
   end
   def prepare_settings
-    @settings = YAML.load_file('config/setting_config.yml')
+    @settings = Setting.configs
   end
   def prepare_params_and_save
     prepare = ["port" , "baud"]

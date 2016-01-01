@@ -1,2 +1,4 @@
-Port : "dev/cu.usbserail"
+<label>Port : </label><%= @settings["port"] %><br/>
+<label>Baudray : </label><%= @settings["baud"] %><br/>
+
 <%=link_to "Change Settings",change_setting_path %>
